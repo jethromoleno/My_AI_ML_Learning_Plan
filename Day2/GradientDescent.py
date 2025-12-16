@@ -77,30 +77,3 @@ plt.xlabel('Iteration')
 plt.ylabel('Loss (Mean Squared Error)')
 plt.grid(True)
 plt.show()
-
-# # Gradient Descent Implementation
-# def gradient_descent(X, y, learning_rate=0.01, epochs=1000):
-#     m = len(y)
-#     theta = np.zeros(X.shape[1])
-#     for _ in range(epochs):
-#         predictions = X.dot(theta)
-#         errors = predictions - y
-#         gradients = (2/m) * X.T.dot(errors)
-#         theta -= learning_rate * gradients
-#     return theta
-
-# # Prepare data for gradient descent (add intercept term)
-# X_b = np.c_[np.ones((X.shape[0], 1)), X]  # add bias term
-# theta_gd = gradient_descent(X_b, y)
-# print("Parameters from Gradient Descent:", theta_gd)
-
-# # Predict values using gradient descent parameters
-# y_pred_gd = X_b.dot(theta_gd)
-# # Plot the results from gradient descent
-# plt.scatter(X, y, color='blue', label='Actual Data')
-# plt.plot(X, y_pred_gd, color='green', label='GD Regression Line')
-# plt.xlabel('X')
-# plt.ylabel('y')
-# plt.title('Gradient Descent Linear Regression Example')
-# plt.legend()
-# plt.show()
